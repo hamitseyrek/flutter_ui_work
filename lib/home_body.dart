@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_work/detail.dart';
 
 class HomeBody extends StatefulWidget {
   const HomeBody({Key? key}) : super(key: key);
@@ -138,37 +139,75 @@ class _HomeBodyState extends State<HomeBody> {
               const SizedBox(height: 15),
               Row(
                 children: [
-                  Container(
-                    margin: const EdgeInsets.only(left: 10),
-                    height: 210,
-                    width: (MediaQuery.of(context).size.width - 50) / 2,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        image: const DecorationImage(
-                            image: AssetImage('assets/modelgrid1.jpeg'),
-                            fit: BoxFit.cover)),
+                  InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const Detail(
+                                img: 'assets/modelgrid1.jpeg',
+                                heroTag: 'tag1',
+                              )));
+                    },
+                    child: Hero(
+                      tag: 'tag1',
+                      child: Container(
+                        margin: const EdgeInsets.only(left: 10),
+                        height: 210,
+                        width: (MediaQuery.of(context).size.width - 50) / 2,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            image: const DecorationImage(
+                                image: AssetImage('assets/modelgrid1.jpeg'),
+                                fit: BoxFit.cover)),
+                      ),
+                    ),
                   ),
                   const SizedBox(width: 15),
                   Column(
                     children: [
-                      Container(
-                        height: 100,
-                        width: (MediaQuery.of(context).size.width - 100) / 2,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            image: const DecorationImage(
-                                image: AssetImage('assets/modelgrid2.jpeg'),
-                                fit: BoxFit.cover)),
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const Detail(
+                                    img: 'assets/modelgrid2.jpeg',
+                                    heroTag: 'tag2',
+                                  )));
+                        },
+                        child: Hero(
+                          tag: 'tag2',
+                          child: Container(
+                            height: 100,
+                            width:
+                                (MediaQuery.of(context).size.width - 100) / 2,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                image: const DecorationImage(
+                                    image: AssetImage('assets/modelgrid2.jpeg'),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
                       ),
                       const SizedBox(height: 10),
-                      Container(
-                        height: 100,
-                        width: (MediaQuery.of(context).size.width - 100) / 2,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            image: const DecorationImage(
-                                image: AssetImage('assets/modelgrid3.jpeg'),
-                                fit: BoxFit.cover)),
+                      InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const Detail(
+                                    img: 'assets/modelgrid3.jpeg',
+                                    heroTag: 'tag3',
+                                  )));
+                        },
+                        child: Hero(
+                          tag: 'tag3',
+                          child: Container(
+                            height: 100,
+                            width:
+                                (MediaQuery.of(context).size.width - 100) / 2,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(5),
+                                image: const DecorationImage(
+                                    image: AssetImage('assets/modelgrid3.jpeg'),
+                                    fit: BoxFit.cover)),
+                          ),
+                        ),
                       ),
                     ],
                   )
