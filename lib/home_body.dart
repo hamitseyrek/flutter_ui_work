@@ -268,22 +268,26 @@ class _HomeBodyState extends State<HomeBody> {
               const Divider(),
               const SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 10, right: 20),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.reply,
-                        color: Colors.brown.withOpacity(0.3), size: 30),
-                    const SizedBox(width: 3),
-                    const Text('1.7k',
-                        style: TextStyle(fontFamily: 'Montserrat')),
-                    const SizedBox(width: 20),
-                    Icon(Icons.comment,
-                        color: Colors.brown.withOpacity(0.3), size: 30),
-                    const SizedBox(width: 3),
-                    const Text('216',
-                        style: TextStyle(fontFamily: 'Montserrat')),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(Icons.reply,
+                            color: Colors.brown.withOpacity(0.3), size: 30),
+                        const SizedBox(width: 3),
+                        const Text('1.7k',
+                            style: TextStyle(fontFamily: 'Montserrat')),
+                        const SizedBox(width: 20),
+                        Icon(Icons.comment,
+                            color: Colors.brown.withOpacity(0.3), size: 30),
+                        const SizedBox(width: 3),
+                        const Text('216',
+                            style: TextStyle(fontFamily: 'Montserrat')),
+                      ],
+                    ),
+                    Row(
                       children: const [
                         Icon(
                           Icons.favorite,
